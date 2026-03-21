@@ -1,0 +1,124 @@
+/* ===== ANAMNESE (ISOLADO) ===== */
+
+.anamnese-main {
+    background: #f4f4f4;
+}
+
+/* BANNER */
+.anamnese-banner {
+    position: relative;
+    height: 220px;
+    background: url('sua-imagem.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anamnese-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(69, 93, 115, 0.6);
+}
+
+.anamnese-banner-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    max-width: 700px;
+}
+
+.anamnese-banner-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.anamnese-banner-content p {
+    font-size: 14px;
+}
+
+/* CONTAINER */
+.anamnese-container {
+    width: 1100px;
+    margin: 30px auto;
+}
+
+/* BOX */
+.anamnese-box {
+    background: #d9dde1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.anamnese-box h2 {
+    color: #455D73;
+    margin-bottom: 15px;
+}
+
+/* GRID */
+.anamnese-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.anamnese-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* INPUTS */
+.anamnese-main label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.anamnese-main input,
+.anamnese-main textarea {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* RADIO / CHECK */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    font-size: 12px;
+}
+
+/* TEXTAREA */
+textarea {
+    min-height: 60px;
+    resize: none;
+}
+
+/* BOTÃO */
+.anamnese-btn {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.anamnese-btn button {
+    background: #455D73;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.anamnese-btn button:hover {
+    background: #2f4052;
+}

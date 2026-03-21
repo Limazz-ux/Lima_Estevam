@@ -1,0 +1,111 @@
+/* ===== PÁGINA DE VERIFICAÇÃO/ALTERAÇÃO ===== */
+
+.auth-main {
+    position: relative;
+    min-height: calc(100vh - 160px); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('imagem-equipe-medica.jpg') no-repeat center/cover;
+}
+
+.auth-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(69, 93, 115, 0.7); /* Cor base do seu header */
+}
+
+.auth-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+/* Card centralizado */
+.auth-card {
+    width: 450px;
+    padding: 35px 40px;
+    background-color: #455D73; /* Cor idêntica ao header */
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* Logo e Nome da Clínica */
+.auth-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.auth-logo {
+    width: 50px;
+    height: 50px;
+    background: #d9d9d9; /* Cor dos botões do header */
+}
+
+.auth-brand {
+    text-align: left;
+}
+
+.auth-brand h1 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.auth-brand span {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Título e Formulário */
+.auth-content h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.auth-form {
+    text-align: left;
+}
+
+.auth-input-group {
+    margin-bottom: 15px;
+}
+
+.auth-input-group label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.auth-input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Botão Centralizado */
+.auth-btn-submit {
+    display: block;
+    width: fit-content;
+    margin: 25px auto 0;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3b4f63; /* Tom ligeiramente mais escuro para contraste */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-btn-submit:hover {
+    background-color: #2f4052;
+}

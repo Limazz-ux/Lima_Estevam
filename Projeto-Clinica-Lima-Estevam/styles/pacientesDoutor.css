@@ -1,0 +1,84 @@
+/* ===== PÁGINA VER AGENDAMENTOS ===== */
+
+.agendamentos-main {
+    padding: 40px 0;
+    min-height: calc(100vh - 160px); /* Compensa header/footer */
+}
+
+.main-title {
+    color: #455D73; /* Cor padrão do projeto */
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.agendamentos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.agenda-column h2 {
+    color: #455D73;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card do Paciente */
+.paciente-card {
+    background-color: #e9ecef; /* Cinza claro suave */
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 200px;
+}
+
+.paciente-info {
+    flex: 1;
+}
+
+.paciente-info h3 {
+    color: #455D73;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.paciente-info p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* Foto do Paciente (Círculo Branco) */
+.paciente-photo {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+/* Botão Reagendar */
+.btn-reagendar {
+    margin-top: 15px;
+    background-color: #455D73;
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-reagendar:hover {
+    background-color: #344657;
+}

@@ -1,0 +1,76 @@
+/* ESPECIALIDADES */
+
+.especialidades{
+padding:60px 0;
+}
+
+.especialidades h1{
+color:#455D73;
+font-size:40px;
+margin-bottom:10px;
+}
+
+.intro{
+max-width:700px;
+font-size:14px;
+color:#666;
+margin-bottom:40px;
+}
+
+.especialidades-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px 60px;
+}
+
+.especialidade h2{
+color:#455D73;
+margin-bottom:10px;
+font-size:26px;
+}
+
+
+/* CARD MEDICO */
+
+.card-medico{
+background:#eaeaea;
+border-radius:10px;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+min-height:140px;
+}
+
+.medico-info{
+max-width:200px;
+}
+
+.medico-info h3{
+color:#455D73;
+margin-bottom:10px;
+}
+
+.medico-info p{
+font-size:12px;
+color:#555;
+margin-bottom:6px;
+}
+
+.medico-foto{
+width:90px;
+height:90px;
+background:#bbb;
+border-radius:50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-right: 70px;
+}
+
+.medico-foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}

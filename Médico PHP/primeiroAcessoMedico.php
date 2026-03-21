@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Projeto-Clinica-Lima-Estevam/styles/primeiroAcessoMedico.css">
+   <link rel="stylesheet" href="../Projeto-Clinica-Lima-Estevam/styles/headerFooter.css">
+   <link rel="shortcut icon" href="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_455D73.png" type="image/x-icon">
+    <title>Primeiro Acesso</title>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+
+            <div class="logo">
+                <a href="./PortaldoSite.html"><img src="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
+                <hr>
+                <span>Lima Estevam <br> Clínica Generalista</span>
+            </div>
+
+            <nav>
+            <ul>
+                <li><a href="../Páginas Principais/sobre.php">Sobre</a></li>
+                <li><a href="../Páginas Principais/especialidades.php">Especialidades</a></li>
+                <li><a href="../Páginas Principais/faleConosco.php">Fale Conosco</a></li>
+                <li><a href="../Páginas Principais/ondeEstamos.php">Onde Estamos</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-buttons">
+            <a href="../Paciente PHP/loginPaciente.php">
+                <button>Agendar Consulta</button>
+            </a>
+            <a href="../Médico PHP/loginDoutor.php">
+                <button>Portal Dr.</button>
+            </a>
+        </div>
+
+        </div>
+    </header>
+    
+    <main class="request-access-main">
+    <div class="container">
+        <section class="request-access-content">
+            <h1>Solicitação de acesso</h1>
+            <p>
+                Digite o seu CRM e a UF. A previsão de autotização do acesso é dentro de 24 horas, 
+                se caso ainda não tiver recebido nenhuma notificação. Mande um e-mail ou mande 
+                uma mensagem para o Whatssap área de TI da clínica
+            </p>
+
+            <div class="form-container">
+                <h2>Solicitação de acesso</h2>
+                
+                <form class="request-form">
+                    <div class="input-row">
+                        <div class="input-group crm">
+                            <label for="crm">CRM</label>
+                            <input type="text" id="crm" name="crm">
+                        </div>
+                        
+                        <div class="input-group uf">
+                            <label for="uf">UF</label>
+                            <input type="text" id="uf" name="uf">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="button-wrapper">
+                    <a href="../Médico PHP/loginDoutor.php">Continuar</a>
+            </div>
+        </section>
+    </div>
+</main>
+
+    <footer>
+
+    <div class="container footer-content">
+
+        <div class="footer-logo">
+            <img src="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_branca.png" alt="Logo-Branca">
+            <p>Lima Estevam <br> Clínica Generalista</p>
+        </div>
+
+        <div>
+            <h4>Central de ajuda</h4>
+            <p>Perguntas frequentes</p>
+            <p>Fale conosco</p>
+        </div>
+
+        <div>
+            <h4>Central de Informações</h4>
+            <p>Whatsapp<br>(11) 9543-1234</p>
+            <p>Telefone<br>(11) 4123-456</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+    © 2026 Clínica Lima Estevam
+    </div>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* ===== LOGIN PAGE (ISOLADO NA MAIN) ===== */
+
+.login-main {
+    position: relative;
+    min-height: calc(100vh - 160px); /* ajusta considerando header/footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('sua-imagem.jpg') no-repeat center/cover;
+}
+
+/* Overlay azul */
+.login-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(69, 93, 115, 0.6);
+}
+
+/* Centralização */
+.login-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+/* Card */
+.login-card {
+    width: 320px;
+    padding: 40px 30px;
+    background-color: #455D73;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Logo */
+.login-logo {
+    width: 40px;
+    height: 40px;
+    background: #d9d9d9;
+    margin: 0 auto 10px;
+}
+
+/* Título */
+.login-card h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.login-card p {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.login-card form {
+    text-align: left;
+}
+
+.login-card label {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Inputs */
+.login-card input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Links */
+.login-links {
+    text-align: center;
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+.login-links a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin: 3px 0;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+/* Botão */
+.login-card button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3b4f63;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-card button:hover {
+    background-color: #2f4052;
+}
