@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Projeto-Clinica-Lima-Estevam/styles/ondeEstamos.css">
-    <link rel="stylesheet" href="../Projeto-Clinica-Lima-Estevam/styles/headerFooter.css">
-    <link rel="shortcut icon" href="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_455D73.png">
+    <link rel="stylesheet" href="../styles/ondeEstamos.css">
+    <link rel="stylesheet" href="../styles/headerFooter.css">
+    <link rel="shortcut icon" href="../imagens/logo_transparente_455D73.png">
     <title>Onde Estamos</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
 
         <div class="logo">
             <a href="../Páginas Principais/PortaldoSite.php">
-            <img src="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
+            <img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
             <hr>
             <span>Lima Estevam <br> Clínica Generalista</span>
         </div>
@@ -66,7 +66,7 @@
         <!-- IMAGEM -->
 
         <div class="onde-imagem">
-        <img src="../Projeto-Clinica-Lima-Estevam/imagens/clinica.png" alt="Clínica Lima Estevam">
+        <img src="../imagens/img_clinica.png" alt="Clínica Lima Estevam">
         </div>
 
         </div>
@@ -99,7 +99,7 @@
     <div class="container footer-content">
 
         <div class="footer-logo">
-            <img src="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_branca.png" alt="logo">
+            <img src="../imagens/logo_transparente_branca.png" alt="logo">
             <p>Lima Estevam <br> Clínica Generalista</p>
         </div>
 

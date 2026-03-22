@@ -13,8 +13,8 @@ gap:40px;
 
 .fale-esquerda{
 flex:1;
-background:url("../imagens/atendimento.jpg") center/cover no-repeat;
-min-height:350px;
+background:url("../imagens/duvidas.png") center/cover no-repeat;
+min-height:800px;
 display:flex;
 align-items:center;
 padding:40px;

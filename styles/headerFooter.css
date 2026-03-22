@@ -1,4 +1,12 @@
 
+@font-face {
+    font-family: Cliver;
+    src: url(/fonte/Cinzel/Cinzel-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Witt;
+    src: url(/fonte/Wittgenstein/Wittgenstein-VariableFont_wght.ttf);
+}
 *{
 margin:0;
 padding:0;
