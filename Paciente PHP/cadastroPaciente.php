@@ -164,7 +164,7 @@
                     </div>
 
                     <div class="cadastro-btn">
-                        <a href="../Paciente PHP/anamnese.php">Cadastre-se</a>
+                        <a href="../Paciente PHP/agendarConsultaPaciente.php">Cadastre-se</a>
                     </div>
 
                 </div>
