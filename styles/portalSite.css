@@ -7,7 +7,6 @@ display:flex;
 align-items:center;
 }
 
-
 /* BLOG */
 
 .blog{
@@ -19,6 +18,7 @@ background:#efefef;
 display:flex;
 justify-content:space-between;
 margin-bottom:20px;
+color:#455D73;
 }
 
 .blog-header a{
@@ -50,6 +50,8 @@ margin-bottom:10px;
 
 .card p{
 font-size:14px;
+color:#5b5b5b;
 }
+
 
 

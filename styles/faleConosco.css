@@ -46,3 +46,8 @@ cursor:pointer;
 .duvidas li:hover{
 color:#455D73;
 }
+p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

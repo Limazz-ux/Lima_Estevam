@@ -1,11 +1,14 @@
 
 @font-face {
-    font-family: Cliver;
-    src: url(/fonte/Cinzel/Cinzel-VariableFont_wght.ttf);
+    font-family: Cinzel;
+    src: url(../fonte/Cinzel/Cinzel-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: Witt;
     src: url(/fonte/Wittgenstein/Wittgenstein-VariableFont_wght.ttf);
+}
+.Cliver {
+    font-family:Cinzel;
 }
 *{
 margin:0;
@@ -87,7 +90,7 @@ margin-top:40px;
 .footer-logo {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items:center;
 }
 
 .footer-logo img {
@@ -109,4 +112,10 @@ text-align:center;
 padding:10px;
 border-top:1px solid rgba(255,255,255,0.3);
 font-size:14px;
+}
+body {
+    color:#5b5b5b;
+}
+.fale-conosco {
+    color:#5b5b5b
 }
