@@ -8,9 +8,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Projeto-Clinica-Lima-Estevam/styles/portalSite.css">
-    <link rel="stylesheet" href="../Projeto-Clinica-Lima-Estevam/styles/headerFooter.css">
-    <link rel="shortcut icon" href="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_455D73.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/portalSite.css">
+    <link rel="stylesheet" href="../styles/headerFooter.css">
+    <link rel="shortcut icon" href="..//imagens/logo_transparente_455D73.png" type="image/x-icon">
     <title>Clínica Lima Estevam</title>
 </head>
 
@@ -21,7 +21,7 @@
 
         <div class="logo">
             <a href="../Páginas Principais/PortaldoSite.php">
-                <img src="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_branca.png" alt="Logo-Branca">
+                <img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca">
             </a>
             <hr>
             <span>Lima Estevam <br> Clínica Generalista</span>
@@ -69,7 +69,7 @@
             <div class="card">
                 <div class="img">
                     <a href="../blogs/pagBlog01.php">
-                        <img src="../Projeto-Clinica-Lima-Estevam/imagens/foto Blog1.png" alt="Corrida">
+                        <img src="../imagens/foto Blog1.png" alt="Corrida">
                     </a>
                 </div>
                 <p>
@@ -80,7 +80,7 @@
             <div class="card">
                 <div class="img">
                     <a href="../blogs/pagBlog02.php">
-                        <img src="../Projeto-Clinica-Lima-Estevam/imagens/foto Blog2.png" alt="Fisioterapia">
+                        <img src="../imagens/foto Blog2.png" alt="Fisioterapia">
                     </a>
                 </div>
                 <p>
@@ -91,7 +91,7 @@
             <div class="card">
                 <div class="img">
                     <a href="../blogs/pagBlog03.php">
-                        <img src="../Projeto-Clinica-Lima-Estevam/imagens/foto Blog3.png" alt="Cardiologia">
+                        <img src="../imagens/foto Blog3.png" alt="Cardiologia">
                     </a>
                 </div>
                 <p>
@@ -111,7 +111,7 @@
     <div class="container footer-content">
 
         <div class="footer-logo">
-            <img src="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_branca.png" alt="logo">
+            <img src="../imagens/logo_transparente_branca.png" alt="logo">
             <p>Lima Estevam <br> Clínica Generalista</p>
         </div>
 

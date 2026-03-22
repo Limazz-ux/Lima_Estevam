@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clínica Lima Estevam</title>
-<link rel="stylesheet" href="../Projeto-Clinica-Lima-Estevam/styles/especialidades.css">
-<link rel="stylesheet" href="../Projeto-Clinica-Lima-Estevam/styles/headerFooter.css">
-<link rel="shortcut icon" href="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_455D73.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/especialidades.css">
+    <link rel="stylesheet" href="../styles/headerFooter.css">
+    <link rel="shortcut icon" href="..//imagens/logo_transparente_455D73.png" type="image/x-icon">
 </head>
 
 <body>
