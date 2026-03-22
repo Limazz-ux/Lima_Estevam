@@ -15,7 +15,7 @@
         <div class="logo">
             <a href="../Páginas Principais/PortaldoSite.php"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
             <hr>
-            <span><div class= "Cliver">Lima Estevam</div> Clinica generalista </span>
+             <span><div class="Cliver">Lima Estevam</div> Clinica Generalista </span>
         </div>
 
         <nav>
@@ -70,9 +70,9 @@
 
     <div class="container footer-content">
 
-        <div class="footer-logo">
+         <div class="footer-logo">
             <img src="../imagens/logo_transparente_branca.png" alt="logo">
-            <p>Lima Estevam <br> Clínica Generalista</p>
+            <span><div class="Cliver">Lima Estevam</div> Clinica Generalista</span>
         </div>
 
         <div>

@@ -9,7 +9,9 @@
 }
 .Cliver {
     font-family:Cinzel;
+    text-transform: capitalize;
 }
+
 *{
 margin:0;
 padding:0;
@@ -69,7 +71,7 @@ font-size:14px;
     gap: 40px;
 }
 
-.header-buttons button{
+.header-buttons button{ 
 width: 150px;
 height:36px;
 text-align: center;

@@ -44,8 +44,12 @@
     
     <div class="auth-wrapper">
         <section class="auth-card">
-            <div class="auth-logo"></div>
-            
+            <div class="logo">
+                <img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca">
+                <hr>
+                <span><div class= "Cliver">Lima Estevam</div> Clinica generalista </span>
+            </div>
+                <br>
             <h2>ESQUECEU A SENHA?</h2>
             <p>Não se preocupe, digite o seu e-mail cadastrado para receber um código de alteração</p>
             
@@ -65,7 +69,7 @@
 
         <div class="footer-logo">
             <img src="../imagens/logo_transparente_branca.png" alt="logo">
-            <p>Lima Estevam <br> Clínica Generalista</p>
+              <span><div class="Cliver">Lima Estevam</div> Clinica Generalista</span>
         </div>
 
         <div>

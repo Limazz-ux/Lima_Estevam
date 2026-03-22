@@ -1,5 +1,9 @@
 /* ===== FORGOT PASSWORD PAGE (ESTILO BÁSICO) ===== */
-
+.logo {
+    display:flex;
+    flex-direction:row;
+    justify-content: left;
+}
 .auth-main {
     position: relative;
     /* Calcula a altura descontando o header/footer do seu projeto */

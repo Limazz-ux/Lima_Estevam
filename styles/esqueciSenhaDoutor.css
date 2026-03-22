@@ -6,7 +6,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('imagem-medicos-tablet.jpg') no-repeat center/cover;
 }
 
 .auth-overlay {
@@ -38,12 +37,6 @@
     justify-content: center;
     gap: 15px;
     margin-bottom: 30px;
-}
-
-.auth-logo {
-    width: 55px;
-    height: 55px;
-    background: #d9d9d9;
 }
 
 .auth-brand {

@@ -12,10 +12,13 @@
     <header>
         <div class="container header-content">
 
-             <div class="logo">
-                <img src="../imagens/logo_transparente_branca.png" alt="logo">
-                <span><div class="Cliver">Lima Estevam</div> Clinica generalista </span>
-            </div>
+        <div class="logo">
+            <a href="../Páginas Principais/PortaldoSite.php">
+                <img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca">
+            </a>
+            <hr>
+            <span><div class="Cliver">Lima Estevam</div> Clinica Generalista </span>
+        </div>
 
             <nav>
                 <ul>
@@ -40,10 +43,8 @@
     <div class="auth-wrapper">
         <section class="auth-card">
             <header class="auth-card-header">
-                <div class="auth-logo"></div>
-                <div class="auth-brand">
             <div class="logo">
-            <a href="../Páginas Principais/PortaldoSite.php"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
+            <img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca">
             <hr>
             <span><div class= "Cliver">Lima Estevam</div> Clinica generalista </span>
                 </div>
@@ -69,9 +70,9 @@
 
     <div class="container footer-content">
 
-        <div class="footer-logo">
-            <img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca">
-            <p>Lima Estevam <br> Clínica Generalista</p>
+         <div class="footer-logo">
+            <img src="../imagens/logo_transparente_branca.png" alt="logo">
+            <span><div class="Cliver">Lima Estevam</div> Clinica Generalista</span>
         </div>
 
         <div>

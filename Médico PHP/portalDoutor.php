@@ -10,26 +10,31 @@
 </head>
 <body>
     <header>
-        <div class="container header-content">
-
-            <div class="logo">
-               <img src="../imagens/logo_transparente_branca.png" alt="logo">
-                <span><div class="Cliver">Lima Estevam</div> Clinica generalista </span>
-                <hr>
-        
-            </div>
+     
+        </div>
 
             <nav>
                 <ul>
                    
                 </ul>
             </nav>
+        <div class="container header-content">
 
+        <div class="logo">
+            <a href="../Páginas Principais/PortaldoSite.php">
+                <img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca">
+            </a>
+            <hr>
+            <span><div class="Cliver">Lima Estevam</div> Clínica Generalista</span>
+        </div>
+
+        <section>
             <div class="header-buttons">
                 <button>Doutor Miguel Lima</button>
             </div>
+        </section>
 
-        </div>
+
     </header>
 
     <main class="portal-main">
@@ -74,9 +79,9 @@
 
     <div class="container footer-content">
 
-        <div class="footer-logo">
+      <div class="footer-logo">
             <img src="../imagens/logo_transparente_branca.png" alt="logo">
-            <p>Lima Estevam <br> Clínica Generalista</p>
+            <span><div class="Cliver">Lima Estevam</div> Clinica Generalista</span>
         </div>
 
         <div>
