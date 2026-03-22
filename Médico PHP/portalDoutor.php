@@ -13,9 +13,10 @@
         <div class="container header-content">
 
             <div class="logo">
-                <a href="../Páginas Principais/PortaldoSite.php"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
+               <img src="../imagens/logo_transparente_branca.png" alt="logo">
+                <span><div class="Cliver">Lima Estevam</div> Clinica generalista </span>
                 <hr>
-                <span>Lima Estevam <br> Clínica Generalista</span>
+        
             </div>
 
             <nav>

@@ -1,28 +1,30 @@
-/* ===== LOGIN PAGE (ESTILO BÁSICO) ===== */
+/* ===== LOGIN PAGE (ISOLADO NA MAIN) ===== */
 
-.auth-main {
-    position: relative;
-    min-height: calc(100vh - 160px); 
+.login-main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('imagem-medicos.jpg') no-repeat center/cover;
+    
+    min-height: calc(150vh - 160px); 
+    
+    background: linear-gradient(rgba(69, 93, 115, 0.6), rgba(69, 93, 115, 0.6)), 
+                url('../imagens/imagem_fundo_login_doutor.png');
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.auth-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(69, 93, 115, 0.6); /* Azul do projeto com opacidade */
-}
 
-.auth-wrapper {
+/* Centralização */
+.login-wrapper {
     position: relative;
     z-index: 1;
 }
 
 /* Card */
-.auth-card {
-    width: 360px; /* Ajustado para acomodar o header horizontal */
+.login-card {
+    width: 320px;
     padding: 40px 30px;
     background-color: #455D73;
     border-radius: 10px;
@@ -30,93 +32,77 @@
     color: #fff;
 }
 
-/* Header do Card (Logo + Texto) */
-.auth-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 30px;
-}
-
-.auth-logo {
-    width: 50px;
-    height: 50px;
+/* Logo */
+.login-logo {
+    width: 40px;
+    height: 40px;
     background: #d9d9d9;
-    flex-shrink: 0;
+    margin: 0 auto 10px;
 }
 
-.auth-brand {
+/* Título */
+.login-card h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.login-card p {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.login-card form {
     text-align: left;
 }
 
-.auth-brand h1 {
-    font-size: 16px;
-    letter-spacing: 1px;
-    margin: 0;
-}
-
-.auth-brand span {
-    font-size: 11px;
-    opacity: 0.9;
-}
-
-/* Form e Inputs */
-.auth-form {
-    text-align: left;
-}
-
-.auth-input-group {
-    margin-bottom: 15px;
-}
-
-.auth-input-group label {
+.login-card label {
+    font-size: 12px;
     display: block;
-    font-size: 13px;
     margin-bottom: 5px;
 }
 
-.auth-input-group input {
+/* Inputs */
+.login-card input {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
+    margin-bottom: 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     outline: none;
-    font-size: 14px;
 }
 
 /* Links */
-.auth-links {
-    margin: 15px 0 25px;
+.login-links {
     text-align: center;
+    font-size: 11px;
+    margin-bottom: 15px;
 }
 
-.auth-links a {
+.login-links a {
     display: block;
-    color: #fff;
+    color: #ccc;
     text-decoration: none;
-    font-size: 12px;
-    margin-bottom: 8px;
-    opacity: 0.9;
+    margin: 3px 0;
 }
 
-.auth-links a:hover {
+.login-links a:hover {
     text-decoration: underline;
 }
 
 /* Botão */
-.auth-btn-submit {
+.login-card button {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     background-color: #3b4f63;
     color: white;
     font-weight: bold;
-    font-size: 14px;
     cursor: pointer;
 }
 
-.auth-btn-submit:hover {
+.login-card button:hover {
     background-color: #2f4052;
 }

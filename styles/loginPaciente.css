@@ -1,20 +1,20 @@
 /* ===== LOGIN PAGE (ISOLADO NA MAIN) ===== */
 
 .login-main {
-    position: relative;
-    min-height: calc(100vh - 160px); /* ajusta considerando header/footer */
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('sua-imagem.jpg') no-repeat center/cover;
+    
+    min-height: calc(150vh - 160px); 
+    
+    background: linear-gradient(rgba(69, 93, 115, 0.6), rgba(69, 93, 115, 0.6)), 
+                url('../imagens/imagem_fundo_login_paciente.png');
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Overlay azul */
-.login-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(69, 93, 115, 0.6);
-}
 
 /* Centralização */
 .login-wrapper {

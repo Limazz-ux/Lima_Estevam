@@ -47,9 +47,15 @@
 
     </div>
 </header>
-<div class="banner">
 
+<div class="carrosel">
+  <div class="slides">
+    <img src="../imagens/bannerEmpresa.png" class="slide">
+    <img src="../imagens/bannerNutri.png" class="slide">
+    <img src="../imagens/bannerMulheres.png" class="slide">
+  </div>
 </div>
+
 
 <section class="blog">
 

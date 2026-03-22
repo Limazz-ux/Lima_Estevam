@@ -15,7 +15,7 @@
         <div class="logo">
             <a href="../Páginas Principais/PortaldoSite.php"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
             <hr>
-            <span>Lima Estevam <br> Clínica Generalista</span>
+            <span><div class= "Cliver">Lima Estevam</div> Clinica generalista </span>
         </div>
 
         <nav>
@@ -40,17 +40,13 @@
 </header>
 
 <main class="login-main">
-
-    <div class="login-overlay"></div>
-
     <section class="login-wrapper">
         <div class="login-card">
-
-            <div class="login-logo"></div>
-
-            <h2>LIMA ESTEVAM</h2>
-            <p>Clínica Generalista</p>
-
+            <div class="logo">
+                <img src="../imagens/logo_transparente_branca.png" alt="logo">
+                <span><div class="Cliver">Lima Estevam</div> Clinica generalista </span>
+            </div>
+            <br>
             <form method="POST" action="">
                 
                 <label for="email">E-mail</label>
@@ -63,7 +59,7 @@
                     <a href="../Paciente PHP/cadastroPaciente.php">Não tem uma conta? Cadastrar-se</a>
                     <a href="../Paciente PHP/esqueciSenhaPaciente.php">Esqueceu senha?</a>
                 </div>
-                <a href="../Paciente PHP/agendarConsultaPaciente.php">Entrar</a>
+                <button type="submit" class="login-button">Entrar</button>
             </form>
         </div>
     </section>

@@ -1,10 +1,32 @@
 /* BANNER */
 
-.banner{
-height:420px;
+.carrosel{
+height:400x;
+width:100%;
 background:linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85));
 display:flex;
 align-items:center;
+}
+.slides {
+    display:flex;
+    width:300%;
+    animation: slideAnimation 10s infinite;
+}
+.slide {
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    flex-shrink: 0;;
+}
+@keyframes slideAnimation {
+    0% { transform: translateX(0);}
+    33% { transform: translateX(0);}
+
+    36% { transform: translateX(-100%);}
+    66% { transform: translateX(-100%);}
+
+    69% { transform: translateX(-200%);}
+    100% { transform: translateX(-200%);}
 }
 
 /* BLOG */

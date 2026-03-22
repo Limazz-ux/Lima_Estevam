@@ -1,5 +1,9 @@
 /* ===== AGENDAMENTO (ISOLADO) ===== */
-
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
 .agendamento-main {
     min-height: calc(100vh - 160px);
     display: flex;
@@ -19,6 +23,7 @@
 .agendamento-card {
     background: #d9dde1;
     padding: 30px 40px;
+    margin:40px;
     border-radius: 10px;
     width: 400px;
 }
@@ -56,18 +61,40 @@
     min-height: 70px;
 }
 
-/* Botão */
-.agendamento-card button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+/* Estilo do Botão corrigido */
+.btn-agendar {
+    width: 100%;       /* Ocupa a largura total do card */
+    padding: 12px;
+    margin-top: 20px;
     background: #455D73;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+    display: block;    /* Garante que ele se comporte como bloco */
 }
 
-.agendamento-card button:hover {
+.btn-agendar:hover {
     background: #2f4052;
+}
+
+/* Reset para tirar a linha branca e garantir o preenchimento da tela */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #8e9aa6; /* Mesma cor do main para sumir com a linha branca */
+}
+
+.agendamento-main {
+    min-height: 100vh; /* Faz o fundo ocupar a tela toda */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0; /* Cria o respiro entre header e footer */
+    background: #8e9aa6;
 }

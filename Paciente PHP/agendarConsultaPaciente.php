@@ -38,7 +38,7 @@
 
         </div>
     </header>
-    <main class="agendamento-main">
+<main class="agendamento-main">
 
     <section class="agendamento-container">
 
@@ -79,7 +79,7 @@
                 <label>Observações:</label>
                 <textarea name="observacoes" placeholder="Caso tiver algo importante coloque aqui"></textarea>
 
-                <a href="../Páginas Principais/PortaldoSite.php">Agendar</a>
+                <button class="btn-agendar" type="submit">Agendar</button>
 
             </form>
         </div>

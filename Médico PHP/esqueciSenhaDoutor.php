@@ -12,10 +12,9 @@
     <header>
         <div class="container header-content">
 
-            <div class="logo">
-                <a href="../Páginas Principais/PortaldoSite.php"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
-                <hr>
-                <span>Lima Estevam <br> Clínica Generalista</span>
+             <div class="logo">
+                <img src="../imagens/logo_transparente_branca.png" alt="logo">
+                <span><div class="Cliver">Lima Estevam</div> Clinica generalista </span>
             </div>
 
             <nav>
@@ -43,8 +42,10 @@
             <header class="auth-card-header">
                 <div class="auth-logo"></div>
                 <div class="auth-brand">
-                    <h1>LIMA ESTEVAM</h1>
-                    <span>Clínica Generalista</span>
+            <div class="logo">
+            <a href="../Páginas Principais/PortaldoSite.php"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
+            <hr>
+            <span><div class= "Cliver">Lima Estevam</div> Clinica generalista </span>
                 </div>
             </header>
             

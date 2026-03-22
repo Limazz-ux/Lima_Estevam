@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/loginDoutor.css">
+    <link rel="stylesheet" href="../styles/loginPaciente.css">
     <link rel="stylesheet" href="../styles/headerFooter.css">
-    <link rel="shortcut icon" href="../imagens/logo_transparente_455D73.png">
-    <title>Login Doutor</title>
+    <link rel="shortcut icon" href="../imagens/logo_transparente_branca.png">
+    <title>Login do Paciente</title>
 </head>
 <body>
     <header>
-        <div class="container header-content">
+    <div class="container header-content">
 
-            <div class="logo">
+        <div class="logo">
             <a href="../Páginas Principais/PortaldoSite.php"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
             <hr>
-            <span>Lima Estevam <br> Clínica Generalista</span>
+            <span><div class= "Cliver">Lima Estevam</div> Clinica generalista </span>
         </div>
 
         <nav>
@@ -27,7 +27,7 @@
             </ul>
         </nav>
 
-            <div class="header-buttons">
+        <div class="header-buttons">
             <a href="../Paciente PHP/loginPaciente.php">
                 <button>Agendar Consulta</button>
             </a>
@@ -36,42 +36,36 @@
             </a>
         </div>
 
-        </div>
-    </header>
-    <main class="auth-main">
-    <div class="auth-overlay"></div>
-    
-    <div class="auth-wrapper">
-        <section class="auth-card">
-            <header class="auth-card-header">
-                <div class="auth-logo"></div>
-                <div class="auth-brand">
-                    <h1>LIMA ESTEVAM</h1>
-                    <span>Clínica Generalista</span>
-                </div>
-            </header>
-            
-            <form class="auth-form">
-                <div class="auth-input-group">
-                    <label for="registro">Registro</label>
-                    <input type="text" id="registro" name="registro" required>
-                </div>
-
-                <div class="auth-input-group">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" required>
-                </div>
-
-                <div class="auth-links">
-                    <a href="../Médico PHP/primeiroAcessoMedico.php">Primeiro acesso? Clique aqui</a>
-                    <a href="../Médico PHP/esqueciSenhaDoutor.php">Esqueceu senha?</a>
-                </div>
-                
-                <a href="../Médico PHP/portalDoutor.php">Entrar</a>
-            </form>
-        </section>
     </div>
+</header>
+
+<main class="login-main">
+    <section class="login-wrapper">
+        <div class="login-card">
+            <div class="logo">
+                <img src="../imagens/logo_transparente_branca.png" alt="logo">
+                <span><div class="Cliver">Lima Estevam</div> Clinica generalista </span>
+            </div>
+            <br>
+            <form method="POST" action="">
+                
+                <label for="registro">Registro</label>
+                <input type="number" id="registro" name="registro">
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha">
+
+                <div class="login-links">
+                    <a href="/Clinica-Lima-Estevam/Médico%20PHP/primeiroAcessoMedico.php">Primeiro acesso? Clique aqui</a>       
+                    <a href="/Clinica-Lima-Estevam/Médico%20PHP/esqueciSenhaDoutor.php">Esqueceu senha?</a>
+                </div>
+                <button type="submit" class="login-button">Entrar</button>
+            </form>
+        </div>
+    </section>
+
 </main>
+
 <footer>
 
     <div class="container footer-content">
