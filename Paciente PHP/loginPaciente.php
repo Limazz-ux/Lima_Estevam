@@ -46,7 +46,9 @@
     <section class="login-wrapper">
         <div class="login-card">
 
-            <div class="login-logo"></div>
+            <div class="login-logo">
+                <img src="../imagens/logo_transparente_455D73.png" alt="Logo">
+            </div>
 
             <h2>LIMA ESTEVAM</h2>
             <p>Clínica Generalista</p>
