@@ -17,7 +17,7 @@
     <div class="container header-content">
 
          <div class="logo">
-            <a href="../Páginas Principais/PortaldoSite.php"><img src="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
+            <a href="../Páginas Principais/PortaldoSite.php"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
             <hr>
             <span>Lima Estevam <br> Clínica Generalista</span>
         </div>
@@ -82,7 +82,7 @@
                     </div>
 
                     <div class="medico-foto">
-                        <img src="../Projeto-Clinica-Lima-Estevam/imagens/drMiguelLima.png" alt="Dr.Miguel">
+                        <img src="../imagens/drMiguelLima.png" alt="Dr.Miguel">
                     </div>
 
                 </div>
@@ -107,7 +107,7 @@
                     </div>
 
                     <div class="medico-foto">
-                        <img src="../Projeto-Clinica-Lima-Estevam/imagens/dr.davi.png" alt="Dr.DaviEstev">
+                        <img src="../imagens/dr.davi.png" alt="Dr.DaviEstev">
                     </div>
 
                 </div>
@@ -130,7 +130,7 @@
                     </div>
 
                     <div class="medico-foto">
-                        <img src="../Projeto-Clinica-Lima-Estevam/imagens/dr-danielSilva.png" alt="Dr.DanielSilva">
+                        <img src="../imagens/dr-danielSilva.png" alt="Dr.DanielSilva">
                     </div>
 
                 </div>
@@ -153,7 +153,7 @@
                     </div>
 
                     <div class="medico-foto">
-                        <img src="../Projeto-Clinica-Lima-Estevam/imagens/dr-Rafael.png" alt="Dr.RafaelOliveira">
+                        <img src="../imagens/dr-Rafael.png" alt="Dr.RafaelOliveira">
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@
                     </div>
 
                     <div class="medico-foto">
-                        <img src="../Projeto-Clinica-Lima-Estevam/imagens/dra.sophia.png" alt="Dra.Sophia">
+                        <img src="../imagens/dra.sophia.png" alt="Dra.Sophia">
                     </div>
                 </div>
             </div>
@@ -196,7 +196,7 @@
                         <p>(11) 30549-2948</p>
                     </div>
                     <div class="medico-foto">
-                        <img src="../Projeto-Clinica-Lima-Estevam/imagens/dra.thais.png" alt="Dra.Thais">
+                        <img src="../imagens/dra.thais.png" alt="Dra.Thais">
                     </div>
                 </div>
             </div>
@@ -213,7 +213,7 @@
     <div class="container footer-content">
 
         <div class="footer-logo">
-            <img src="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_branca.png" alt="logo">
+            <img src="../imagens/logo_transparente_branca.png" alt="logo">
             <p>Lima Estevam <br> Clínica Generalista</p>
         </div>
 
