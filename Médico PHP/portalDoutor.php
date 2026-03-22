@@ -20,9 +20,7 @@
 
             <nav>
                 <ul>
-                    <li><a href="../Médico PHP/pacientesDoutor.php">Pacientes</a></li>
-                    <li><a href="../Médico PHP/procuraProntuario.php">Prontuário</a></li>
-                    <li><a href="../Médico PHP/pedidos.php">Pedidos de Exame</a></li>
+                   
                 </ul>
             </nav>
 

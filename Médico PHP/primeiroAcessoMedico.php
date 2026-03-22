@@ -13,7 +13,7 @@
         <div class="container header-content">
 
             <div class="logo">
-                <a href="./PortaldoSite.html"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
+                <a href="../Páginas Principais/PortaldoSite.php"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
                 <hr>
                 <span>Lima Estevam <br> Clínica Generalista</span>
             </div>
