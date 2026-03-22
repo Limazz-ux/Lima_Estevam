@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Projeto-Clinica-Lima-Estevam/styles/loginDoutor.css">
-    <link rel="stylesheet" href="../Projeto-Clinica-Lima-Estevam/styles/headerFooter.css">
-    <link rel="shortcut icon" href="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_455D73.png">
+    <link rel="stylesheet" href="../styles/loginDoutor.css">
+    <link rel="stylesheet" href="../styles/headerFooter.css">
+    <link rel="shortcut icon" href="../imagens/logo_transparente_455D73.png">
     <title>Login Doutor</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
         <div class="container header-content">
 
             <div class="logo">
-            <a href="../Páginas Principais/PortaldoSite.php"><img src="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
+            <a href="../Páginas Principais/PortaldoSite.php"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
             <hr>
             <span>Lima Estevam <br> Clínica Generalista</span>
         </div>
@@ -77,7 +77,7 @@
     <div class="container footer-content">
 
         <div class="footer-logo">
-            <img src="../Projeto-Clinica-Lima-Estevam/imagens/logo_transparente_branca.png" alt="logo">
+            <img src="../imagens/logo_transparente_branca.png" alt="logo">
             <p>Lima Estevam <br> Clínica Generalista</p>
         </div>
 
