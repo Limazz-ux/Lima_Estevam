@@ -4,35 +4,33 @@ include("../conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $crm = $_POST['crm'];
-    $uf = $_POST['uf'];
+    $crm = trim($_POST['crm']);
+    $uf = strtoupper(trim($_POST['uf']));
 
-    // Proteção básica contra SQL Injection
     $crm = mysqli_real_escape_string($conn, $crm);
     $uf = mysqli_real_escape_string($conn, $uf);
 
-    // Verifica se existe médico
     $sql = "SELECT * FROM medico WHERE CRM = '$crm' AND uf = '$uf'";
     $result = mysqli_query($conn, $sql);
 
-    if (mysqli_num_rows($result) == 1) {
+    if ($result && mysqli_num_rows($result) == 1) {
 
-        //  Gerar senha aleatória
+        // Gerar senha aleatória
         $senha_aleatoria = substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, 8);
 
-        // (Recomendado) criptografar senha
-        $senha_hash = password_hash($senha_aleatoria, PASSWORD_DEFAULT);
+        // 🔥 SEM CRIPTOGRAFIA
+        $update = "UPDATE medico SET senha = '$senha_aleatoria' WHERE CRM = '$crm' AND uf = '$uf'";
 
-        // Atualizar senha no banco
-        $update = "UPDATE medico SET senha = '$senha_hash' WHERE CRM = '$crm' AND uf = '$uf'";
-        mysqli_query($conn, $update);
+        if (mysqli_query($conn, $update)) {
 
-        // Guardar senha para mostrar no popup
-        $_SESSION['senha_temporaria'] = $senha_aleatoria;
+            $_SESSION['senha_temporaria'] = $senha_aleatoria;
 
-        // Redirecionar
-        header("Location: loginDoutor.php");
-        exit();
+            header("Location: loginDoutor.php");
+            exit();
+
+        } else {
+            echo "<script>alert('Erro ao atualizar senha!');</script>";
+        }
 
     } else {
         echo "<script>alert('CRM ou UF não encontrados!');</script>";

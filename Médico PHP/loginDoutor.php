@@ -38,10 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -141,11 +137,11 @@ session_start();
 
 <?php if (isset($_SESSION['senha_temporaria'])): ?>
 <script>
-    alert("Sua senha de primeiro acesso é: <?php echo $_SESSION['senha_temporaria']; ?>");
+    alert("Sua senha temporária é: <?php echo $_SESSION['senha_temporaria']; ?>");
 </script>
-<?php
-unset($_SESSION['senha_temporaria']);
-endif;
+<?php 
+    unset($_SESSION['senha_temporaria']); // limpa depois de mostrar
+endif; 
 ?>
 
 </body>

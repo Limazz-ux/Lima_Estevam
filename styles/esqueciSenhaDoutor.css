@@ -113,10 +113,22 @@
     background-color: #2f4052;
 }
 
-/* Responsividade */
-@media (max-width: 520px) {
-    .auth-card {
-        width: 90%;
-        padding: 30px 20px;
-    }
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3b4f63;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: 25px;
+    width:150px;
+
+}
+
+.login-button :hover {
+    background-color: #2f4052;
 }
