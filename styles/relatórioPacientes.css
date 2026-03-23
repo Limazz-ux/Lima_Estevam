@@ -1,0 +1,17 @@
+
+table {
+display: flex;
+flex-direction: center;
+justify-content: center;
+align-items: center;
+border-radius: 9px;
+background-color: white;
+}
+table th {
+    background-color: #455d73;
+    color: white;
+    font-family:Witt;
+}
+table td {
+        color:#7a7a7a
+    }

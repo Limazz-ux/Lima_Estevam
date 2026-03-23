@@ -1,3 +1,25 @@
+<?php
+session_start();
+include("conexao.php");
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    $sql = "SELECT * FROM  pacientes  WHERE  email = '$email' AND senha = '$senha' ";
+    $result = mysqli_query ($conn, $sql);
+    $result = mysqli_query($conn,$sql);
+
+if (mysqli_num_rows($result) == 1) {
+    $usuario = mysqli_fetch_assoc($result);     
+    $_SESSION['usuario_id'] = $usuario['id']; 
+    $_SESSION['usuario_email'] = $usuario['email']; 
+    header("Location: agendarConsultaPaciente.php");
+
+exit; 
+    $erro = "Email ou senha inválidos"; 
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

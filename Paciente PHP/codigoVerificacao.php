@@ -17,7 +17,8 @@
                 <img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca">
             </a>
             <hr>
-            <span>Lima Estevam <br> Clínica Generalista</span>
+            <span><div class="Cliver">Lima Estevam</div> Clínica Generalista</span>
+
         </div>
 
         <nav>

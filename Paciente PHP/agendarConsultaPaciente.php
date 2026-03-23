@@ -15,9 +15,8 @@
              <div class="logo">
                 <a href="../Páginas Principais/PortaldoSite.php"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
                 <hr>
-                <span>Lima Estevam <br> Clínica Generalista</span>
+               <span><div class="Cliver">Lima Estevam</div> Clínica Generalista</span>
             </div>
-
             <nav>
             <ul>
                 <li><a href="../Páginas Principais/sobre.php">Sobre</a></li>
@@ -34,8 +33,7 @@
             <a href="../Médico PHP/loginDoutor.php">
                 <button>Portal Dr.</button>
             </a>
-        </div>
-
+</div>
         </div>
     </header>
 <main class="agendamento-main">

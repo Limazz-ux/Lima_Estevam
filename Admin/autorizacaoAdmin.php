@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="./styles/headerFooter.css">
-    <link rel="stylesheet" href="./styles/autorizacaoAdmin.css">
+     <link rel="stylesheet" href="../styles/headerFooter.css">
+    <link rel="stylesheet" href="../styles/autorizacaoAdmin.css">
     <link rel="shortcut icon" href="./imagens/logo_transparente_455D73.png" type="image/x-icon">
     <title>Requisiçoes</title>
 </head>
@@ -13,17 +13,14 @@
         <div class="container header-content">
 
             <div class="logo">
-                <a href="./PortaldoSite.html"><img src="./imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
+                <a href="./PortaldoSite.html"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
                 <hr>
-                <span>Lima Estevam <br> Clínica Generalista</span>
+                <span> <div class="Cliver">Lima Estevam  Clínica Generalista</span>
             </div>
 
             <nav>
                 <ul>
-                    <li><a href="./sobre.html">Sobre</a></li>
-                    <li><a href="./especialidades.html">Especialidades</a></li>
-                    <li><a href="./faleConosco.html">Fale Conosco</a></li>
-                    <li><a href="./ondeEstamos.html">Onde Estamos</a></li>
+                   <li><a href="relatórioPacientes.php">Relatório</a></li>
                 </ul>
             </nav>
 
@@ -83,8 +80,8 @@
     <div class="container footer-content">
 
         <div class="footer-logo">
-            <img src="./imagens/logo_transparente_branca.png" alt="logo">
-            <p>Lima Estevam <br> Clínica Generalista</p>
+            <img src="../imagens/logo_transparente_branca.png" alt="logo">
+           <span> <div class="Cliver">Lima Estevam  Clínica Generalista</span>
         </div>
 
         <div>
