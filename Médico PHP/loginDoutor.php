@@ -1,3 +1,47 @@
+<?php
+session_start();
+include("../conexao.php"); // ajuste o caminho se necessário
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $registro = $_POST['registro'];
+    $senha = $_POST['senha'];
+
+    // Evitar SQL Injection
+    $registro = mysqli_real_escape_string($conn, $registro);
+    $senha = mysqli_real_escape_string($conn, $senha);
+
+    // Consulta no banco
+    $sql = "SELECT * FROM medico WHERE CRM = '$registro'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) == 1) {
+
+        $medico = mysqli_fetch_assoc($result);
+
+        // Verificação da senha (simples, igual ao seu banco)
+        if ($senha == $medico['senha']) {
+
+            $_SESSION['medico_id'] = $medico['id'];
+
+            // Redireciona para painel do médico
+            header("Location: portalDoutor.php");
+            exit;
+
+        } else {
+            echo "<script>alert('Senha incorreta!');</script>";
+        }
+
+    } else {
+        echo "<script>alert('CRM não encontrado!');</script>";
+    }
+}
+?>
+
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,7 +50,7 @@
     <link rel="stylesheet" href="../styles/loginPaciente.css">
     <link rel="stylesheet" href="../styles/headerFooter.css">
     <link rel="shortcut icon" href="../imagens/logo_transparente_branca.png">
-    <title>Login do Paciente</title>
+    <title>Login do Doutor</title>
 </head>
 <body>
     <header>
@@ -50,14 +94,14 @@
             <form method="POST" action="">
                 
                 <label for="registro">Registro</label>
-                <input type="number" id="registro" name="registro">
+                <input type="number" id="registro" name="registro" required>
 
                 <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha">
+               <input type="password" id="senha" name="senha" required>
 
                 <div class="login-links">
-                    <a href="/Clinica-Lima-Estevam/Médico%20PHP/primeiroAcessoMedico.php">Primeiro acesso? Clique aqui</a>       
-                    <a href="/Clinica-Lima-Estevam/Médico%20PHP/esqueciSenhaDoutor.php">Esqueceu senha?</a>
+                    <a href="../Médico PHP/primeiroAcessoMedico.php">Primeiro acesso? Clique aqui</a>       
+                    <a href="../Médico PHP/esqueciSenhaDoutor.php">Esqueceu senha?</a>
                 </div>
                 <button type="submit" class="login-button">Entrar</button>
             </form>
@@ -94,5 +138,15 @@
     </div>
 
 </footer>
+
+<?php if (isset($_SESSION['senha_temporaria'])): ?>
+<script>
+    alert("Sua senha de primeiro acesso é: <?php echo $_SESSION['senha_temporaria']; ?>");
+</script>
+<?php
+unset($_SESSION['senha_temporaria']);
+endif;
+?>
+
 </body>
 </html>

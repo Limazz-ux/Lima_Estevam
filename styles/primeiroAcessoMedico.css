@@ -63,12 +63,6 @@
 .crm { width: 350px; }
 .uf { width: 100px; }
 
-/* Botão de Ação */
-.button-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
 .btn-continue {
     background-color: #455D73; /* Consistente com o header */
     color: white;
@@ -83,4 +77,24 @@
 
 .btn-continue:hover {
     background-color: #344657;
+}
+
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3b4f63;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: 25px;
+    width:150px;
+
+}
+
+.login-button :hover {
+    background-color: #2f4052;
 }

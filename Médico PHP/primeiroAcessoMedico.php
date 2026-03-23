@@ -1,3 +1,45 @@
+<?php
+session_start();
+include("../conexao.php");
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $crm = $_POST['crm'];
+    $uf = $_POST['uf'];
+
+    // Proteção básica contra SQL Injection
+    $crm = mysqli_real_escape_string($conn, $crm);
+    $uf = mysqli_real_escape_string($conn, $uf);
+
+    // Verifica se existe médico
+    $sql = "SELECT * FROM medico WHERE CRM = '$crm' AND uf = '$uf'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) == 1) {
+
+        //  Gerar senha aleatória
+        $senha_aleatoria = substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, 8);
+
+        // (Recomendado) criptografar senha
+        $senha_hash = password_hash($senha_aleatoria, PASSWORD_DEFAULT);
+
+        // Atualizar senha no banco
+        $update = "UPDATE medico SET senha = '$senha_hash' WHERE CRM = '$crm' AND uf = '$uf'";
+        mysqli_query($conn, $update);
+
+        // Guardar senha para mostrar no popup
+        $_SESSION['senha_temporaria'] = $senha_aleatoria;
+
+        // Redirecionar
+        header("Location: loginDoutor.php");
+        exit();
+
+    } else {
+        echo "<script>alert('CRM ou UF não encontrados!');</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -52,23 +94,26 @@
             <div class="form-container">
                 <h2>Solicitação de acesso</h2>
                 
-                <form class="request-form">
+                <form class="request-form" method="POST">
                     <div class="input-row">
                         <div class="input-group crm">
                             <label for="crm">CRM</label>
-                            <input type="text" id="crm" name="crm">
+                            <input type="text" id="crm" name="crm" required>
                         </div>
                         
                         <div class="input-group uf">
                             <label for="uf">UF</label>
-                            <input type="text" id="uf" name="uf">
+                            <input type="text" id="uf" name="uf" required>
+                                  <div class="button-wrapper">
+                            
                         </div>
                     </div>
-                </form>
+                    <div class="button-wrapper">
+                            <button type="submit" class="login-button">Solicitar</button>
+</div>
+                    
             </div>
-
-            <div class="button-wrapper">
-                    <a href="../Médico PHP/loginDoutor.php">Continuar</a>
+                </form>
             </div>
         </section>
     </div>
