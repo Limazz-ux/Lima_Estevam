@@ -29,12 +29,13 @@
 
 /* Card central com a cor padrão #455D73 */
 .auth-card {
-    width: 320px;
+    width: 150px;
     padding: 40px 30px;
     background-color: #455D73;
     border-radius: 10px;
     text-align: center;
     color: #fff;
+    margin: 40px;
 }
 
 /* Logo quadrada básica */
@@ -105,4 +106,20 @@
 
 .auth-card a:hover {
     text-decoration: underline;
+}
+.btn-continue {
+    padding: 10px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    background-color: #597289; /* Consistente com o header */
+    color: white;
+    border: none;
+    padding: 12px 60px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
 }

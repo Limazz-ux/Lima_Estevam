@@ -1,30 +1,43 @@
 <?php
 session_start();
-include("../conexao.php"); // ajuste o caminho se necessário
+include("../conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $registro = $_POST['registro'];
     $senha = $_POST['senha'];
 
-    // Evitar SQL Injection
     $registro = mysqli_real_escape_string($conn, $registro);
     $senha = mysqli_real_escape_string($conn, $senha);
 
-    // Consulta no banco
+    // =========================
+    // 🔴 1. VERIFICA ADMIN
+    // =========================
+    $sql_admin = "SELECT * FROM adm WHERE CRM = '$registro' AND senha = '$senha'";
+    $result_admin = mysqli_query($conn, $sql_admin);
+
+    if ($result_admin && mysqli_num_rows($result_admin) == 1) {
+
+        $_SESSION['admin'] = true;
+
+        header("Location: ../Admin/autorizacaoAdmin.php"); 
+        exit;
+    }
+
+    // =========================
+    // 🔵 2. VERIFICA MÉDICO
+    // =========================
     $sql = "SELECT * FROM medico WHERE CRM = '$registro'";
     $result = mysqli_query($conn, $sql);
 
-    if (mysqli_num_rows($result) == 1) {
+    if ($result && mysqli_num_rows($result) == 1) {
 
         $medico = mysqli_fetch_assoc($result);
 
-        // Verificação da senha (simples, igual ao seu banco)
         if ($senha == $medico['senha']) {
 
             $_SESSION['medico_id'] = $medico['id'];
 
-            // Redireciona para painel do médico
             header("Location: portalDoutor.php");
             exit;
 

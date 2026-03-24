@@ -1,3 +1,37 @@
+<?php
+session_start();
+include("../conexao.php");
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $email = trim($_POST['email']);
+    $email = mysqli_real_escape_string($conn, $email);
+
+    // Verifica se email existe
+    $sql = "SELECT * FROM pacientes WHERE email = '$email'";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result && mysqli_num_rows($result) == 1) {
+
+        // Gerar código de verificação (6 dígitos)
+        $codigo = rand(100000, 999999);
+
+        // Salvar na sessão
+        $_SESSION['codigo_verificacao'] = $codigo;
+        $_SESSION['email_recuperacao'] = $email;
+
+        // Popup + redirecionamento
+        echo "<script>
+            alert('Seu código de verificação é: $codigo');
+            window.location.href = 'codigoVerificacaoDoutor.php';
+        </script>";
+
+    } else {
+        echo "<script>alert('Email não encontrado!');</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -57,7 +91,7 @@
                 <label for="email">Digite o seu e-mail</label>
                 <input type="email" id="email" required>
                 
-                <a href="../Paciente PHP/codigoVerificacao.php">Receber código</a>
+               <button class= "btn-continue">Receber código</button>
             </form>
         </section>
     </div>
