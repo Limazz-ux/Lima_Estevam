@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("conexao.php");
+include("../conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
@@ -11,8 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 if (mysqli_num_rows($result) == 1) {
     $usuario = mysqli_fetch_assoc($result);     
-    $_SESSION['usuario_id'] = $usuario['id']; 
-    $_SESSION['usuario_email'] = $usuario['email']; 
+    $_SESSION['pacientes_id'] = $usuario['id']; 
+    $_SESSION['pacientes_email'] = $usuario['email']; 
     header("Location: agendarConsultaPaciente.php");
 
 exit; 

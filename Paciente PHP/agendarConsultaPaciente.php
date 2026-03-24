@@ -1,3 +1,25 @@
+<?php
+session_start();
+include("../conexao.php");
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $esp = $_POST ['especialidade'];
+    $medico = $_POST ['medico'];
+    $data = $_POST ['data_consulta'];
+    $motivo = $_POST ['motivo_consulta'];
+    $observacoes = $_POST ['observacoes'];
+  
+
+$sql = "INSERT INTO AgendarConsulta (especialidade,medico,data_consulta,motivo_consulta,observacoes ) VALUES ('$esp', '$medico', '$data', '$motivo', '$observacoes')";
+
+if (mysqli_query($conn,$sql) ) {
+    header("Location: loginPaciente.php");
+    exit;
+} else {
+    echo "Erro ao agendar a consulta:" . mysqli_error($conn);
+}
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

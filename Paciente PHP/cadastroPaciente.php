@@ -1,3 +1,35 @@
+<?php
+session_start();
+include("../conexao.php");
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nome = $_POST ['nome'];
+    $email = $_POST ['email'];
+    $senha = $_POST ['senha'];
+    $confSenha= $_POST['confirmar_senha'];
+    $telefone = $_POST ['telefone'];
+    $cpf = $_POST ['cpf'];
+    $rg = $_POST ['rg'];
+    $data_nascimento = $_POST ['data_nascimento'];
+    $idade = $_POST ['idade'];
+    $rua= $_POST['rua'];
+    $numero = $_POST ['numero'];
+    $cep = $_POST ['cep'];
+    $complemento = $_POST ['complemento'];
+    $bairro = $_POST ['bairro'];
+    $cidade = $_POST ['cidade'];
+    $uf= $_POST['uf'];
+
+$sql = "INSERT INTO pacientes (nome, email, senha, confirmar_senha, telefone, cpf, rg, data_nascimento, idade, rua, num, cep, complemento, bairro, cidade, uf) VALUES ('$nome','$email','$senha','$confSenha','$telefone','$cpf','$rg','$data_nascimento','$idade','$rua','$numero','$cep','$complemento','$bairro','$cidade','$uf')";
+
+if (mysqli_query($conn,$sql) ) {
+    header("Location:agendarConsultaPaciente.php");
+    exit;
+} else {
+    echo "Erro ao cadastrar:" . mysqli_error($conn);
+}
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

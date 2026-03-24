@@ -6,7 +6,7 @@ $usuario = "root";
 // Senha do banco (vazia no xampp)
 $senha = "";
 // Nome do banco criado
-$banco = "lima_estevam";
+$banco = "LimaEstevam";
 // Criando conexão com o banco de dados (MySQL)
 $conn= mysqli_connect($host,$usuario,$senha,$banco);
 //Verificando se a conexão funcionou
