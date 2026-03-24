@@ -1,3 +1,29 @@
+<?php
+include("../conexao.php");
+
+if(isset($_GET['acao']) && isset($_GET['id'])){
+
+    $id = $_GET['id'];
+    $acao = $_GET['acao'];
+
+    if($acao == "aprovar"){
+        // Exemplo: mover para tabela ativa ou liberar acesso
+        echo "<script>
+            alert('Requisição APROVADA com sucesso!');
+            window.location.href='autorizacaoAdmin.php';
+        </script>";
+    }
+
+    if($acao == "negar"){
+        // Exemplo: deletar ou marcar como negado
+        echo "<script>
+            alert('Requisição NEGADA!');
+            window.location.href='autorizacaoAdmin.php';
+        </script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,9 +39,9 @@
         <div class="container header-content">
 
             <div class="logo">
-                <a href="./PortaldoSite.html"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
+                <a href="../Páginas Principais/PortaldoSite.php"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
                 <hr>
-                <span> <div class="Cliver">Lima Estevam  Clínica Generalista</span>
+                <span> <div class="Cliver">Lima Estevam</div>  Clínica Generalista</span>
             </div>
 
             <nav>
@@ -24,12 +50,17 @@
                 </ul>
             </nav>
 
-            <div class="header-buttons">
+          
+        <div class="header-buttons">
+            <a href="../Paciente PHP/loginPaciente.php">
                 <button>Agendar Consulta</button>
+            </a>
+            <a href="../Médico PHP/loginDoutor.php">
                 <button>Portal Dr.</button>
-            </div>
-
+            </a>
         </div>
+        </div>
+          
     </header>
 
     <main class="requisicoes-main container">
@@ -49,7 +80,8 @@
                         <span class="label">UF</span>
                         <div class="value-box">SP</div>
                     </div>
-                    <button class="btn-autorizar">Autorizar</button>
+                    <button class="btn-autorizar" onclick="aprovar(1)">Autorizar</button>
+                    <button class="btn-autorizar" onclick="negar(1)">Desaprovar</button>
                 </div>
             </div>
             <div class="funcionario-photo"></div>
@@ -67,7 +99,8 @@
                         <span class="label">UF</span>
                         <div class="value-box">SP</div>
                     </div>
-                    <button class="btn-autorizar">Autorizar</button>
+                    <button class="btn-autorizar" onclick="aprovar(1)">Autorizar</button>
+                    <button class="btn-autorizar" onclick="negar(1)">Desaprovar</button>
                 </div>
             </div>
             <div class="funcionario-photo"></div>
@@ -103,5 +136,14 @@
     </div>
 
 </footer>
+<script>
+function aprovar(id){
+    window.location.href = "autorizacaoAdmin.php?acao=aprovar&id=" + id;
+}
+
+function negar(id){
+    window.location.href = "autorizacaoAdmin.php?acao=negar&id=" + id;
+}
+</script>
 </body>
 </html>

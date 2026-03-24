@@ -1,17 +1,72 @@
-
-table {
-display: flex;
-flex-direction: center;
-justify-content: center;
-align-items: center;
-border-radius: 9px;
-background-color: white;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* Faz a página ocupar 100% da altura */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Estrutura principal */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN cresce e empurra o footer */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tabela */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho */
 table th {
     background-color: #455d73;
     color: white;
-    font-family:Witt;
+    padding: 14px;
+    text-align: left;
+    font-size: 16px;
 }
+
+/* Conteúdo */
 table td {
-        color:#7a7a7a
-    }
+    color: #7a7a7a;
+    padding: 14px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Zebra */
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover */
+table tr:hover {
+    background-color: #eef2f5;
+    transition: 0.2s;
+}
+
+/* Footer sempre no final */
+footer {
+    background-color: #4f657a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

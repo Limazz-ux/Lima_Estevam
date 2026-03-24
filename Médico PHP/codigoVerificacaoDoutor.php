@@ -1,3 +1,48 @@
+<?php
+session_start();
+include("../conexao.php");
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $codigo_digitado = $_POST['codigo'];
+    $nova_senha = $_POST['nova_senha'];
+    $confirmar_senha = $_POST['confirmar_senha'];
+
+    // ✅ Verifica se as senhas são iguais
+    if ($nova_senha != $confirmar_senha) {
+        echo "<script>alert('As senhas não coincidem!');</script>";
+        exit();
+    }
+
+    // ✅ Verifica código
+    if ($codigo_digitado == $_SESSION['codigo_verificacao']) {
+
+        $email = $_SESSION['email_recuperacao'];
+
+        // Atualiza senha (SEM criptografia)
+        $sql = "UPDATE medico SET senha = '$nova_senha' WHERE email = '$email'";
+
+        if (mysqli_query($conn, $sql)) {
+
+            // Limpa sessão
+            unset($_SESSION['codigo_verificacao']);
+            unset($_SESSION['email_recuperacao']);
+
+            echo "<script>
+                alert('Senha alterada com sucesso!');
+                window.location.href = 'loginDoutor.php';
+            </script>";
+
+        } else {
+            echo "<script>alert('Erro ao atualizar senha!');</script>";
+        }
+
+    } else {
+        echo "<script>alert('Código incorreto!');</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -55,23 +100,27 @@
             <div class="auth-content">
                 <h2>Alteração de Senha</h2>
                 
-                <form class="auth-form">
+                <form class="auth-form" method="POST">
+
                     <div class="auth-input-group">
                         <label for="codigo">Digite o Código</label>
                         <input type="text" id="codigo" name="codigo" required>
                     </div>
 
                     <div class="auth-input-group">
-                        <label for="nova-senha">Nova Senha</label>
-                        <input type="password" id="nova-senha" name="nova-senha" required>
+                        <label for="nova_senha">Nova Senha</label>
+                        <input type="password" id="nova_senha" name="nova_senha" required>
                     </div>
 
                     <div class="auth-input-group">
-                        <label for="confirmar-senha">Confirmar Senha</label>
-                        <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+                        <label for="confirmar_senha">Confirmar Senha</label>
+                        <input type="password" id="confirmar_senha" name="confirmar_senha" required>
                     </div>
                     
-                    <a href="../Médico PHP/loginDoutor.php">Alterar Senha</a>
+                    <div class="button-wrapper">
+                        <button type="submit">Alterar Senha</button>
+                    </div>
+
                 </form>
             </div>
         </section>

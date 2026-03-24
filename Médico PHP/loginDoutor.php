@@ -1,3 +1,56 @@
+<?php
+session_start();
+include("../conexao.php");
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $registro = $_POST['registro'];
+    $senha = $_POST['senha'];
+
+    $registro = mysqli_real_escape_string($conn, $registro);
+    $senha = mysqli_real_escape_string($conn, $senha);
+
+    // =========================
+    // 🔴 1. VERIFICA ADMIN
+    // =========================
+    $sql_admin = "SELECT * FROM adm WHERE CRM = '$registro' AND senha = '$senha'";
+    $result_admin = mysqli_query($conn, $sql_admin);
+
+    if ($result_admin && mysqli_num_rows($result_admin) == 1) {
+
+        $_SESSION['admin'] = true;
+
+        header("Location: ../Admin/autorizacaoAdmin.php"); 
+        exit;
+    }
+
+    // =========================
+    // 🔵 2. VERIFICA MÉDICO
+    // =========================
+    $sql = "SELECT * FROM medico WHERE CRM = '$registro'";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result && mysqli_num_rows($result) == 1) {
+
+        $medico = mysqli_fetch_assoc($result);
+
+        if ($senha == $medico['senha']) {
+
+            $_SESSION['medico_id'] = $medico['id'];
+
+            header("Location: portalDoutor.php");
+            exit;
+
+        } else {
+            echo "<script>alert('Senha incorreta!');</script>";
+        }
+
+    } else {
+        echo "<script>alert('CRM não encontrado!');</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,7 +59,7 @@
     <link rel="stylesheet" href="../styles/loginPaciente.css">
     <link rel="stylesheet" href="../styles/headerFooter.css">
     <link rel="shortcut icon" href="../imagens/logo_transparente_branca.png">
-    <title>Login do Paciente</title>
+    <title>Login do Doutor</title>
 </head>
 <body>
     <header>
@@ -50,14 +103,14 @@
             <form method="POST" action="">
                 
                 <label for="registro">Registro</label>
-                <input type="number" id="registro" name="registro">
+                <input type="number" id="registro" name="registro" required>
 
                 <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha">
+               <input type="password" id="senha" name="senha" required>
 
                 <div class="login-links">
-                    <a href="/Clinica-Lima-Estevam/Médico%20PHP/primeiroAcessoMedico.php">Primeiro acesso? Clique aqui</a>       
-                    <a href="/Clinica-Lima-Estevam/Médico%20PHP/esqueciSenhaDoutor.php">Esqueceu senha?</a>
+                    <a href="../Médico PHP/primeiroAcessoMedico.php">Primeiro acesso? Clique aqui</a>       
+                    <a href="../Médico PHP/esqueciSenhaDoutor.php">Esqueceu senha?</a>
                 </div>
                 <button type="submit" class="login-button">Entrar</button>
             </form>
@@ -94,5 +147,15 @@
     </div>
 
 </footer>
+
+<?php if (isset($_SESSION['senha_temporaria'])): ?>
+<script>
+    alert("Sua senha temporária é: <?php echo $_SESSION['senha_temporaria']; ?>");
+</script>
+<?php 
+    unset($_SESSION['senha_temporaria']); // limpa depois de mostrar
+endif; 
+?>
+
 </body>
 </html>

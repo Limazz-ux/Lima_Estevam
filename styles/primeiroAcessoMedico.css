@@ -63,12 +63,6 @@
 .crm { width: 350px; }
 .uf { width: 100px; }
 
-/* Botão de Ação */
-.button-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
 .btn-continue {
     background-color: #455D73; /* Consistente com o header */
     color: white;
@@ -84,3 +78,4 @@
 .btn-continue:hover {
     background-color: #344657;
 }
+
