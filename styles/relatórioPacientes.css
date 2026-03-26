@@ -1,72 +1,88 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ... manter seu reset anterior ... */
+
+.container-relatorio {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
-/* Faz a página ocupar 100% da altura */
-html, body {
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
-
-/* Estrutura principal */
-body {
+.titulo-acoes {
     display: flex;
-    flex-direction: column;
-}
-
-/* MAIN cresce e empurra o footer */
-main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-/* Tabela */
-table {
-    border-collapse: collapse;
-    width: 80%;
-    max-width: 1000px;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.titulo-acoes h1 {
+    color: #455d73;
+    font-size: 28px;
 }
 
-/* Cabeçalho */
-table th {
+.btn-adicionar {
     background-color: #455d73;
     color: white;
-    padding: 14px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.busca-container {
+    margin-bottom: 20px;
+}
+
+.busca-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #455d73;
+    padding: 15px;
     text-align: left;
-    font-size: 16px;
+    border-bottom: 2px solid #eee;
 }
 
-/* Conteúdo */
-table td {
-    color: #7a7a7a;
-    padding: 14px;
-    border-bottom: 1px solid #e0e0e0;
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    color: #555;
 }
 
-/* Zebra */
-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+.acoes-botoes {
+    display: flex;
+    gap: 10px;
 }
 
-/* Hover */
-table tr:hover {
-    background-color: #eef2f5;
-    transition: 0.2s;
+.btn-remarcar, .btn-excluir {
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-/* Footer sempre no final */
-footer {
+.btn-remarcar {
     background-color: #4f657a;
     color: white;
-    text-align: center;
-    padding: 20px;
 }
+
+.btn-excluir {
+    background-color: #d9534f;
+    color: white;
+}
+
+.btn-remarcar:hover { background-color: #3a4d5e; }
+.btn-excluir:hover { background-color: #c9302c; }

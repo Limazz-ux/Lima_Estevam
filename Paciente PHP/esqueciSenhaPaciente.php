@@ -20,10 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['codigo_verificacao'] = $codigo;
         $_SESSION['email_recuperacao'] = $email;
 
-        // Popup + redirecionamento
+        // Popup + redirecionamento para a página de digitar o código
         echo "<script>
             alert('Seu código de verificação é: $codigo');
-            window.location.href = 'codigoVerificacaoDoutor.php';
+            window.location.href = 'codigoVerificacao.php';
         </script>";
 
     } else {
@@ -31,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -87,9 +86,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2>ESQUECEU A SENHA?</h2>
             <p>Não se preocupe, digite o seu e-mail cadastrado para receber um código de alteração</p>
             
-            <form method="post">
+            <form method="post" action="">
                 <label for="email">Digite o seu e-mail</label>
-                <input type="email" id="email" required>
+                <input type="email" name="email"  id="email" required>
                 
                <button class= "btn-continue">Receber código</button>
             </form>

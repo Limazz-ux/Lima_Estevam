@@ -12,12 +12,11 @@
     <header>
         <div class="container header-content">
 
-            <div class="logo">
+       <div class="logo">
                 <a href="../Páginas Principais/PortaldoSite.php"><img src="../imagens/logo_transparente_branca.png" alt="Logo-Branca"></a>
                 <hr>
-                <span>Lima Estevam <br> Clínica Generalista</span>
+                <span> <div class="Cliver">Lima Estevam </div> Clínica Generalista</span>
             </div>
-
             <nav>
             <ul>
                 <li><a href="../Páginas Principais/sobre.php">Sobre</a></li>
@@ -83,9 +82,9 @@
         <div class="container footer-content">
 
             <div class="footer-logo">
-                <img src="../imagens/logo_transparente_branca.png" alt="logo">
-                <p>Lima Estevam <br> Clínica Generalista</p>
-            </div>
+            <img src="../imagens/logo_transparente_branca.png" alt="logo">
+            <span><div class="Cliver">Lima Estevam</div>   Clínica Generalista </span>
+        </div>
 
             <div>
                 <h4>Central de ajuda</h4>

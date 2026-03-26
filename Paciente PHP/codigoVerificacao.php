@@ -2,43 +2,39 @@
 session_start();
 include("../conexao.php");
 
+// Proteção: Se não houver e-mail na sessão, volta para a página inicial
+if (!isset($_SESSION['email_recuperacao'])) {
+    header("Location: esqueciSenhaPaciente.php");
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $codigo_digitado = $_POST['codigo'];
     $nova_senha = $_POST['nova_senha'];
     $confirmar_senha = $_POST['confirmar_senha'];
 
-    // ✅ Verifica se as senhas são iguais
     if ($nova_senha != $confirmar_senha) {
         echo "<script>alert('As senhas não coincidem!');</script>";
-        exit();
-    }
-
-    // ✅ Verifica código
-    if ($codigo_digitado == $_SESSION['codigo_verificacao']) {
-
+    } elseif ($codigo_digitado != $_SESSION['codigo_verificacao']) {
+        echo "<script>alert('Código incorreto!');</script>";
+    } else {
         $email = $_SESSION['email_recuperacao'];
 
-        // Atualiza senha (SEM criptografia)
+        // Atualiza senha
         $sql = "UPDATE pacientes SET senha = '$nova_senha' WHERE email = '$email'";
 
         if (mysqli_query($conn, $sql)) {
-
-            // Limpa sessão
-            unset($_SESSION['codigo_verificacao']);
-            unset($_SESSION['email_recuperacao']);
+            // Limpa sessão após sucesso
+            session_destroy();
 
             echo "<script>
                 alert('Senha alterada com sucesso!');
-                window.location.href = 'loginDoutor.php';
+                window.location.href = 'loginPaciente.php';
             </script>";
-
         } else {
-            echo "<script>alert('Erro ao atualizar senha!');</script>";
+            echo "<script>alert('Erro ao atualizar senha no banco!');</script>";
         }
-
-    } else {
-        echo "<script>alert('Código incorreto!');</script>";
     }
 }
 ?>
@@ -98,22 +94,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <br>
             <h2>Alteração de Senha</h2>
             
-            <form class="auth-form">
+        <form class="auth-form" method="post" action="">
                 <div class="auth-input-group">
                     <label for="codigo">Digite o Código</label>
-                    <input type="text" id="codigo">
+                    <input type="text" name="codigo" id="codigo" required>
                 </div>
 
                 <div class="auth-input-group">
-                    <label for="nova-senha">Nova Senha</label>
-                    <input type="password" id="nova-senha">
+                    <label for="nova_senha">Nova Senha</label>
+                    <input type="password" name="nova_senha" id="nova_senha">
                 </div>
 
                 <div class="auth-input-group">
-                    <label for="confirmar-senha">Confirmar Senha</label>
-                    <input type="password" id="confirmar-senha">
+                    <label for="confirmar_senha">Confirmar Senha</label>
+                    <input type="password" name="confirmar_senha" id="confirmar_senha">
                 </div>
                 
+
 
                 <button class= "btn-continue">Alterar</button>
             </form>
